@@ -1,0 +1,85 @@
+.wrapper {
+    background: rgb(197, 195, 195);
+    width: 60%;
+    min-height: 600px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr auto;
+    grid-template-areas:
+        "hd hd hd"
+        "mn mn mn"
+        "ft ft ft";
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 30px;
+    grid-area: hd;
+}
+
+.main-content {
+    min-height: 70%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-area: mn;
+}
+
+.mainpart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 45% 1fr 1fr;
+    background: rgb(252, 252, 215);
+    grid-template-areas:
+        "p p"
+        "mr mr"
+        "ml ml";
+    gap: 10px;
+    padding: 10px;
+}
+
+p {
+    grid-area: p;
+    padding: 10px;
+}
+
+.main__row {
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+    justify-content: space-between;
+    grid-area: mr;
+
+}
+
+.mainp {
+    min-height: 30px;
+    background-color: rgb(182, 194, 159);
+    padding: 30px;
+    align-items: center;
+}
+
+.sidebar {
+    padding: 35px;
+    background: rgb(206, 252, 208);
+    align-items: center;
+}
+
+.mainp-long {
+    grid-area: ml;
+    
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: ft;
+
+}
+
+.section {
+    display: grid;
+    padding: 10px;
+    background: rgb(252, 255, 252);
+    margin: 10px;
+}

@@ -1,7 +1,7 @@
 
 .wrapper {
     background: rgb(197, 195, 195);
-    max-width: 1200px;
+    max-width: 1400px;
     min-height: 600px;
     overflow: hidden;
     text-align: center;
@@ -22,9 +22,7 @@
     padding: 30px;
     grid-area: hd;
 }
-.header__contain{
-    margin: 0px auto;
-}
+
 .main-content {
     padding: 0px 15px;
     margin: 0px auto;
@@ -84,7 +82,6 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fill, 25%);
     grid-area: ft;
-
 }
 
 .section {
@@ -92,4 +89,84 @@ p {
     padding: 10px;
     background: rgb(252, 255, 252);
     margin: 10px;
+}
+
+
+/* Устроства с маленьким экраном (планшеты, 768px и выше) */
+@media (max-width: 767px) {
+    /* стили для xs-устройств */
+    .wrapper{
+    max-width: none;
+    min-height: 40px;
+    overflow: hidden;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  70px auto 1fr;
+    grid-template-areas: "hd" "mn" "ft";
+    }
+    .header {
+        background: rgb(130, 142, 248);
+        max-width: 100%;
+        padding: auto;
+        grid-area: hd;
+    }
+    
+    .main-content {
+        background-color: rgb(182, 194, 159);
+        padding: 7px;
+        display: grid;
+        grid-template: 1fr auto / 1fr;
+        grid-template-areas: 
+        "mnp"
+        "sb";
+        margin: 5px;
+        grid-area: mn;
+    }
+    .mainpart{
+        background: rgb(252, 252, 215);
+        grid-area: mnp;
+    }
+    
+    .sidebar{
+        grid-area: sb;
+      }
+    .main__row {
+       display: grid;
+       gap: 10px;
+       grid-template: 1fr 1fr / 1fr ;
+       grid-template-areas: "mp1" "mp2";
+    }
+    .mainp1 {
+      grid-area: mp1;      
+    }
+    .mainp2 {
+        grid-area: mp2;      
+      }
+    .mainp-long {
+       grid-area: ml;
+    }
+    
+    .footer {
+        background: rgb(130, 142, 248);
+        max-width: 100%;
+        display: grid;
+        grid-template: repeat(auto-fill, 25%) / 1fr;
+        grid-area: ft;
+    }
+    .section {
+        display: grid;
+        padding: 5px;
+        background: rgb(252, 255, 252);
+        align-items: center;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /* стили для sm-устройств */
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+    /* стили для md-устройств */
+}
+@media (min-width: 1200px) {
+    /* стили для lg-устройств */
 }

@@ -1,7 +1,9 @@
+
 .wrapper {
     background: rgb(197, 195, 195);
-    width: 60%;
+    max-width: 1200px;
     min-height: 600px;
+    overflow: hidden;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -13,13 +15,19 @@
 }
 
 .header {
+    background: rgb(130, 142, 248);
+    max-width: 100%;
     display: grid;
     grid-template-columns: 100%;
     padding: 30px;
     grid-area: hd;
 }
-
+.header__contain{
+    margin: 0px auto;
+}
 .main-content {
+    padding: 0px 15px;
+    margin: 0px auto;
     min-height: 70%;
     display: grid;
     grid-template-columns: 70% 30%;
@@ -71,6 +79,8 @@ p {
 }
 
 .footer {
+    background: rgb(130, 142, 248);
+    max-width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, 25%);
     grid-area: ft;
